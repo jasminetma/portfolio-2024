@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-line"></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-line"></div>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hi, I'm<br><span class="hero-name">Jasmine Timilsina</span></h1>
+                <p>I'm a passionate and detail-oriented UI/UX designer who blends creativity with purpose. I craft clean, engaging, and meaningful user experiences that leave a lasting impression.</p>
+                <div class="hero-buttons">
+                    <a href="mailto:jastimilsina@gmail.com" class="btn btn-primary">Hire Me</a>
+                    <button class="btn btn-secondary" id="downloadCV">
+                        Download CV
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20design-ll3ydOEBoNMTr0nUmszbK8mUlcwfut.png" alt="Jasmine Timilsina">
+                    <div class="sparkle sparkle-1">✦</div>
+                    <div class="sparkle sparkle-2">✦</div>
+                    <div class="sparkle sparkle-3">✦</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="portfolio-nav">
+                <button class="portfolio-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <div class="portfolio-item">
+                        <img src="assets/hamroasraya.png?height=400&width=300" alt="Asraya">
+                        <div class="portfolio-overlay">
+                            <h3>Asraya, Hostel Rental</h3>
+                            <div class="figma-icon">
+                                <a href="https://www.figma.com/design/eOq34ChbEydTQNlQ47BytO/Hamro-Asraya?node-id=1047-345&t=k5ahPflJLiFo2rOF-1" target="_blank" rel="noopener noreferrer" aria-label="Figma">
+                                    <i class="fab fa-figma"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="assets/ecodrive.png?height=400&width=300" alt="EcoDrive">
+                        <div class="portfolio-overlay">
+                            <h3>EcoDrive, Car Rental</h3>
+                            <div class="figma-icon">
+                                <a href="https://www.figma.com/design/OsfPVlRPpJcsKjLbsvt11j/EcoRental?node-id=89-16&t=GsGAnBpWEX4A3Oz7-1" target="_blank" rel="noopener noreferrer" aria-label="Figma">
+                                    <i class="fab fa-figma"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="portfolio-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combined About Me & What I Do Section -->
+    <section id="about" class="about-combined">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-me-section">
+                    <div class="section-header">
+                        <h2 class="section-title-left">About Me</h2>
+                        <div class="title-line"></div>
+                    </div>
+                    <p class="about-text">
+                        Hi, I'm a curious creator at heart and a UI/UX designer by trade. My design journey started with a love for visual storytelling—sketching ideas, tinkering with layouts, and wondering "how can this be better?" Over time, that curiosity turned into a craft: designing digital experiences that not only look good but feel right. I'm driven by the belief that design isn't just about pixels—it's about people. I love digging into the 'why' behind a user's action and turning that into intuitive, meaningful interfaces. When something I design makes someone's day just a little easier or more delightful, that's a win for me.
+                    </p>
+                </div>
+                
+                <div class="what-i-do-section">
+                    <div class="section-header-right">
+                        <div class="title-line-right"></div>
+                        <h2 class="section-title-right">What I Do</h2>
+                    </div>
+                    <p class="what-i-do-text">
+                        I design with users in mind and intention in every pixel. My work spans across web and mobile platforms—whether it's crafting a clean onboarding flow, refining a product dashboard, or building a bold homepage that tells a story. I take ideas from rough sketches to polished prototypes, always keeping collaboration and feedback at the core. I don't believe in "just making it pretty"—I believe in making it work. Good design should guide, not confuse. It should connect, not just impress. If you've got a vision, I'll help you bring it to life in a way that's both beautiful and user-focused.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="services-column">
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>Mobile App UI Design</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>Website UI Design</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>Responsive Design</span>
+                    </div>
+                </div>
+                <div class="services-column">
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>Wireframing</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>User Flow Diagrams</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>Clickable Prototypes</span>
+                    </div>
+                </div>
+                <div class="services-column">
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>UX Case Studies</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>User Personas</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check"></i>
+                        <span>Design Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; color: #a855f7; font-size: 2.5rem; margin-bottom: 5rem;">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-circle" data-percentage="100">
+                        <div class="skill-percentage">100%</div>
+                    </div>
+                    <span class="skill-name">Figma</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-circle" data-percentage="80">
+                        <div class="skill-percentage">80%</div>
+                    </div>
+                    <span class="skill-name">Canva</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-circle" data-percentage="75">
+                        <div class="skill-percentage">75%</div>
+                    </div>
+                    <span class="skill-name">Illustrator</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h2>
+                        <span class="purple-text">Get in</span><br>
+                        <span class="white-text">touch.</span>
+                    </h2>
+                </div>
+                
+                <div class="contact-right">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Contact</h3>
+                            <p>jastimilsina@gmail.com</p>
+                            <p>+977 984551255</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Information</h3>
+                            <p>Available for Internship</p>
+                            <p>Remote work preferred</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jasminetimilsina" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.behance.net/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="https://github.com/jasminetma" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/wolvwrwn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <canvas id="sparkle-canvas"></canvas>
+    <script src="sparkle.js"></script>
+</body>
+</html>
