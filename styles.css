@@ -44,7 +44,7 @@ body {
 .nav-line {
   flex: 1;
   height: 0.9px;
-  background: #a855f7;
+  background: #9d65c6;
   max-width: 250px;
 }
 
@@ -136,12 +136,13 @@ body {
   font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+  font-weight: 400;
 }
 
 .hero-name {
   color: #a855f7;
   display: block;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .hero-content p {
@@ -173,12 +174,12 @@ body {
 .btn-primary {
   background: transparent;
   color: white;
-  border: 1.5px solid #a855f7;
+  border: 1.5px solid #9d65c6;
   font-family: "IBM Plex Serif", serif;
 }
 
 .btn-primary:hover {
-  background: #9333ea;
+  background: #9d65c6;
   transform: translateY(-2px);
   box-shadow: 0 0 30px 2px #a855f7;
 }
@@ -186,12 +187,12 @@ body {
 .btn-secondary {
   background: transparent;
   color: white;
-  border: 1.5px solid #a855f7;
+  border: 1.5px solid #9d65c6;
   font-family: "IBM Plex Serif", serif;
 }
 
 .btn-secondary:hover {
-  background: #9333ea;
+  background: #9d65c6;
   transform: translateY(-2px);
   box-shadow: 0 0 30px 2px #a855f7;
 }
@@ -221,7 +222,7 @@ body {
 
 .sparkle {
   position: absolute;
-  color: #a855f7;
+  color: #9d65c6;
   font-size: 1.5rem;
   animation: sparkle 2s infinite;
 }
@@ -471,13 +472,13 @@ body {
   opacity: 0.9;
   line-height: 1.8;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .what-i-do-section {
   position: relative;
   margin-left: auto;
-  max-width: 600px;
+  max-width: 700px;
   text-align: right;
 }
 
@@ -486,7 +487,7 @@ body {
   opacity: 0.9;
   line-height: 1.8;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Services Section */

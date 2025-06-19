@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
             position: fixed;
             top: 100px;
             right: 20px;
-            background: #a855f7;
+            background: #9d65c6;
             color: white;
             padding: 12px 20px;
             border-radius: 8px;
