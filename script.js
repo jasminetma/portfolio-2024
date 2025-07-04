@@ -237,7 +237,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const sectionHeight = section.offsetHeight
       const sectionId = section.getAttribute("id")
 
-      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      const isLastSection = section === sections[sections.length - 1];
+  if (
+  (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) ||
+  (isLastSection && scrollPos + window.innerHeight >= document.body.scrollHeight)
+    ) {
         navLinks.forEach((link) => {
           link.classList.remove("active")
         })

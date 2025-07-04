@@ -1,9 +1,12 @@
-
 const canvas = document.getElementById("sparkle-canvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
 
 let sparkles = [];
 
@@ -12,34 +15,37 @@ function createSparkle() {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
     size: Math.random() * 2 + 1,
-    opacity: Math.random(), // Initial opacity
-    opacityDirection: Math.random() < 0.5 ? 1 : -1, // Random direction for opacity change (fading in or out)
-    speedX: Math.random() * 0.5 - 0.25,
-    speedY: Math.random() * 0.5 - 0.25
+    opacity: Math.random(),
+    opacityDirection: Math.random() < 0.5 ? 1 : -1,
+    speedX: (Math.random() - 0.5) * 0.5,
+    speedY: (Math.random() - 0.5) * 0.5
   };
 }
 
-for (let i = 0; i < 150; i++) {
-  sparkles.push(createSparkle());
+function initSparkles() {
+  sparkles = [];
+  for (let i = 0; i < 150; i++) {
+    sparkles.push(createSparkle());
+  }
 }
+
+initSparkles();
 
 function drawSparkles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   sparkles.forEach(sparkle => {
-    // Smoothly fade in and out
     if (sparkle.opacityDirection === 1) {
-      sparkle.opacity += 0.01; // Fade in
+      sparkle.opacity += 0.01;
       if (sparkle.opacity >= 1) {
-        sparkle.opacityDirection = -1; // Reverse direction when fully visible
+        sparkle.opacityDirection = -1;
       }
     } else {
-      sparkle.opacity -= 0.01; // Fade out
+      sparkle.opacity -= 0.01;
       if (sparkle.opacity <= 0) {
-        sparkle.opacityDirection = 1; // Reverse direction when fully transparent
+        sparkle.opacityDirection = 1;
       }
     }
 
-    // Draw the sparkle with the current opacity
     ctx.beginPath();
     ctx.arc(sparkle.x, sparkle.y, sparkle.size, 0, Math.PI * 2);
     ctx.fillStyle = `rgba(255, 255, 255, ${sparkle.opacity})`;
@@ -49,15 +55,14 @@ function drawSparkles() {
 
 function updateSparkles() {
   sparkles.forEach(sparkle => {
-    // Sparkles move slowly around the screen (like fireflies)
     sparkle.x += sparkle.speedX;
     sparkle.y += sparkle.speedY;
 
-    // Reset position if the sparkle goes out of bounds
-    if (sparkle.x < 0 || sparkle.x > canvas.width || sparkle.y < 0 || sparkle.y > canvas.height) {
-      sparkle.x = Math.random() * canvas.width;
-      sparkle.y = Math.random() * canvas.height;
-    }
+    // Wrap around edges instead of resetting to random position
+    if (sparkle.x < 0) sparkle.x = canvas.width;
+    if (sparkle.x > canvas.width) sparkle.x = 0;
+    if (sparkle.y < 0) sparkle.y = canvas.height;
+    if (sparkle.y > canvas.height) sparkle.y = 0;
   });
 }
 
@@ -70,6 +75,6 @@ function animate() {
 animate();
 
 window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  resizeCanvas();
+  initSparkles(); // Reinitialize sparkles with new canvas dimensions
 });
