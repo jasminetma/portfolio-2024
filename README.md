@@ -66,15 +66,8 @@ Alternatively, deploy with:
 
 - 📧 jastimilsina@gmail.com  
 - 🌐 [LinkedIn](https://www.linkedin.com/in/jasminetimilsina)  
-- 🎨 [Behance](https://www.behance.net/yourusername)  
+- 🎨 [Behance](https://www.behance.net/jasminetimilsi)  
 - 💻 [GitHub](https://github.com/jasminetma)
-
----
-
-## 🧠 Domain Tip for Nepali Developers
-
-Applying for a `.com.np` domain?  
-🕐 Expect it to be approved in **1–3 business days**, but upload your documents clearly and follow up proactively with [register.com.np](https://register.com.np/).
 
 ---
 
